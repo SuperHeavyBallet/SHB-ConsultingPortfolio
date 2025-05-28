@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="javascript.js"></script>
     <title>SHB - Consultant</title>
 </head>
@@ -18,9 +19,17 @@
                 <li>
                     <a href="#about">About</a></li>
                 <li>
-                    <a href="#case-studies">Case Studies</a></li>
-                <li href="#services"><a>Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                    <a href="#case-studies">Case Studies</a>
+                </li>
+                <li>
+                    <a href="#video-carousel">Video Examples</a>
+                </li>
+                <li >
+                    <a href="#services">Services</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
             </ul>
         </div>
     </header>
@@ -111,7 +120,7 @@
                 <li>✔ Armwrestling Academia (Sports Analysis & Education)</li>
         </ul>
     </div>
-
+        <h3><i>I have skills and experience that will boost your project.</i></h3>
         <div class="button-tray">
             <button class="prominent-button">Book a Free Consultation</button>
         </div>
@@ -120,9 +129,10 @@
         </section>
 
         <section class="case-studies-section" id="case-studies">
-            <h3>Case Studies:</h3>
+            <h3 class="section-title">Case Studies:</h3>
 
             <div class="case-studies-card-wrapper">
+
             <a href="https://www.youtube.com/@zacktelander" target="_blank" class="case-study-card">
                 <h3>Zack Telander</h3>
                 <p>Role: Channel architect</p>
@@ -131,7 +141,7 @@
             </a>
 
             <a href="https://www.youtube.com/watch?v=BKpmAGZQetc&t=1254s&pp=ygUhbW9yZSBwbGF0ZXMgbW9yZSBkYXRlcyBsaXZlciBraW5n" target="_blank" class="case-study-card">
-                <h3>More Plates More Dates (Liver King Doc)</h3>
+                <h3>More Plates More Dates</h3>
                 <p>Role: Co-direction, narrative edit</p>
                 <p>Impact: 5M views in 24 hours | major industry shift</p>
                 <p>Highlight: Built tension + momentum in 1-hour exposé format</p>
@@ -168,16 +178,204 @@
             
         </section>
 
-        <section id="services">
-            Services
+        <section class="video-carousel" id="video-carousel">
+            <div class="carousel-holder">
+                <button id="prevButton">
+                    <
+                </button>
+
+                <div class="video-tray">
+                    <div class="video-wrapper">
+                    <iframe 
+                        class="youtubePlayer"
+                        src="https://www.youtube.com/embed/BKpmAGZQetc?enablejsapi=1" 
+                        id="player1"
+                        title="The Liver King Lie Documentary Expose" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+    
+                <div class="video-wrapper">
+                    <iframe 
+                        class="youtubePlayer"
+                        src="https://www.youtube.com/embed/91ZuAC0BCY8?enablejsapi=1" 
+                        id="player2"
+                        title="The World&#39;s Most BRUTAL Combat Sports" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+    
+                    </iframe>
+                </div>
+
+                <div class="video-wrapper hidden">
+                    <iframe 
+                        class="youtubePlayer"
+                        src="https://www.youtube.com/embed/y-hniaUQ9Ac?enablejsapi=1" 
+                        id="player3"
+                        title="Russian Dudes are BUILT DIFFERENT" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-wrapper hidden">
+                    <iframe 
+                        class="youtubePlayer"
+                        src="https://www.youtube.com/embed/zReRh6ESK_U?enablejsapi=1" 
+                        id="player4"
+                        title="PISARENKO | Weightlifting&#39;s Most Iconic Athlete" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen></iframe>
+                </div>
+    
+    
+                </div>
+
+                <button id="nextButton">
+                    >
+                </button>
+            </div>
+
         </section>
 
-        <section id="contact">
-            Contact
+        <section id="services" class="services-section">
+            <h3 class="section-title">Services I Offer</h3>
+
+            <div class="services-cards-row">
+            <div class="services-card">
+                <div class="services-card-header">
+                    <h3>Strategy & Consulting</h3>
+                </div>
+                <div class="services-card-body">
+                <p><i>For creators who want to grow smart, not just fast.</i></p>
+
+                <div class="services-card-sub-header">
+                    <h4>Channel Audit & Growth Strategy</h4>
+                </div>
+                <ul>
+                    <li>Review of current performance, audience retention and content structure</li>
+                    <li>Custom plan for titles, thumbnails, pacing and content direction</li>
+                </ul>
+                <div class="services-card-sub-header">
+                    <h4>Narrative & Branding Consultation</h4>
+                </div>
+                <ul>
+                    <li>Help finding or refining the creator’s “voice”</li>
+                    <li>Channel identity, target audience focus, brand tone</li>
+                </ul>
+                <div class="services-card-sub-header">
+                    <h4>YouTube Algorithm Coaching</h4>
+                </div>
+                <ul>
+                    <li>Education on current best practices (CTR, AVD, watch time funnels)</li>
+                    <li>How to build long-term consistency into high-performing formats</li>
+                </ul>
+            </div>
+
+                <div class="services-card-footer">
+                    <h3 >I want this</h3>
+                </div>
+            </div>
+
+            <div class="services-card">
+                <div class="services-card-header">
+                    <h3>Video Creating & Editing Services</h3>
+                </div>
+                
+                <div class="services-card-body">
+                <p><i>For creators who want quality, story-driven content.</i></p>
+
+                <div class="services-card-sub-header">
+                    <h4>Full Video Production (Editing + Narrative Arc)</h4>
+                </div>
+                <ul>
+                    <li>You send footage, I handle the full structure</li>
+                    <li>Narrative build-up, tension pacing, and retention-optimized layout</li>
+                </ul>
+                <div class="services-card-sub-header">
+                    <h4>Re-Edits or Turnaround for Existing Content</h4>
+                </div>
+                <ul>
+                    <li>Rescue/upgrade existing videos that underperformed</li>
+                    <li>Turn dense ideas into digestible, dynamic edits</li>
+                </ul>
+
+                <div class="services-card-sub-header">
+                    <h4>Motion Graphics & Visual Polish</h4>
+                </div>
+                <ul>
+                    <li>On-brand, stylish motion assets (lower thirds, transitions, pacing cues)</li>
+                    <li>Callouts, quote pulls, mini-montages to elevate storytelling</li>
+                </ul>
+            </div>
+                <div class="services-card-footer">
+                    <h3 >I want this</h3>
+                </div>
+            </div>
+
+            <div class="services-card">
+                <div class="services-card-header">
+                    <h3>Long-Term Creative Direction</h3>
+                </div>
+
+                <div class="services-card-body">
+                <p><i>For studios or creators ready to scale like a brand.</i></p>
+
+                <div class="services-card-sub-header">
+                    <h4>Channel Architecture & Format Systems</h4>
+                </div>
+                <ul>
+                    <li>Show templates, posting calendars, thematic cycles</li>
+                    <li>Systems for consistent output with evergreen and trend-reactive content</li>
+                </ul>
+
+                <div class="services-card-sub-header">
+                    <h4>Creative Lead / Ghost Director</h4>
+                </div>
+                
+                <ul>
+                    <li>Long-term collaboration as a behind-the-scenes force</li>
+                    <li>Guide team editors, collaborate with creators on ideas/scripts</li>      
+                    <li>Become the “shadow co-creator” shaping a channel’s evolution</li>
+                </ul>
+            </div>
+                <div class="services-card-footer">
+                    <h3 >I want this</h3>
+                </div>
+                
+            </div>
+
+            
+
+
+        </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h3 class="section-title">Get In Touch</h3>
         </section>
 
 
     </main>
+
+
+    <footer>
+        <div class="left-side">
+            Send me an email: SuperHeavyBallet@gmail.com
+        </div>
+
+        <div class="right-side">
+            <p>© 2025 Alexander Gorham. All rights reserved.</p>
+        </div>
+    </footer>
     
 </body>
 </html>
