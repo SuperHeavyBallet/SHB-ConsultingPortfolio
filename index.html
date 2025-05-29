@@ -15,28 +15,28 @@
             <ul>
                 <li>
                     <a href="#hero">Home</a></li>
-                <li>
+                
                 <li>
                     <a href="#about">About</a></li>
+
                 <li>
-                    <a href="#case-studies">Case Studies</a>
-                </li>
+                    <a href="#case-studies">Case Studies</a></li>
+
                 <li>
-                    <a href="#video-carousel">Video Examples</a>
-                </li>
+                    <a href="#video-carousel">Video Examples</a></li>
+
                 <li >
-                    <a href="#services">Services</a>
-                </li>
+                    <a href="#services">Services</a></li>
+
                 <li>
-                    <a href="#contact">Contact</a>
-                </li>
+                    <a href="#contact">Contact</a></li>
             </ul>
         </div>
     </header>
 
     <main >
-        <section class="hero-section" id="hero">
-
+        <section class="hero-section" >
+            <div id="hero"></div>
             <section class="hero-section-card-text">
             <h2>YouTube Growth Consultant & Creative Director</h2>
 
@@ -80,7 +80,7 @@
             <h3><i>Let’s build something worth watching</i>.</h3>
           
             <div class="button-tray">
-                <button class="prominent-button">Book a Strategy Call</button> <button class="prominent-button">View Case Studies</button>
+                <a class="prominent-button" href="#contact">Book a Strategy Call</a> <a class="prominent-button" href="#case-studies">View Case Studies</a>
             </div>
         </section>
 
@@ -96,7 +96,9 @@
 
         </section>
 
-        <section class="about-section" id="about">
+        <div id="about" ></div>
+        <section class="about-section" >
+           
             <h3>About Me</h3>
 
             <p>
@@ -128,7 +130,8 @@
 
         </section>
 
-        <section class="case-studies-section" id="case-studies">
+        <div id="case-studies"></div>
+        <section class="case-studies-section" >
             <h3 class="section-title">Case Studies:</h3>
 
             <div class="case-studies-card-wrapper">
@@ -178,7 +181,10 @@
             
         </section>
 
-        <section class="video-carousel" id="video-carousel">
+        <div id="video-carousel"></div>
+
+        <section class="video-carousel">
+            
             <div class="carousel-holder">
                 <button id="prevButton">
                     <
@@ -246,16 +252,18 @@
 
         </section>
 
-        <section id="services" class="services-section">
+        <div  id="services"></div>
+        <section  class="services-section">
             <h3 class="section-title">Services I Offer</h3>
 
             <div class="services-cards-row">
             <div class="services-card">
                 <div class="services-card-header">
                     <h3>Strategy & Consulting</h3>
+                    <p><i>For creators who want to grow smart, not just fast.</i></p>
                 </div>
                 <div class="services-card-body">
-                <p><i>For creators who want to grow smart, not just fast.</i></p>
+                
 
                 <div class="services-card-sub-header">
                     <h4>Channel Audit & Growth Strategy</h4>
@@ -280,18 +288,19 @@
                 </ul>
             </div>
 
-                <div class="services-card-footer">
+                <a href="#contact" class="services-card-footer">
                     <h3 >I want this</h3>
-                </div>
+                </a>
             </div>
 
             <div class="services-card">
                 <div class="services-card-header">
                     <h3>Video Creating & Editing Services</h3>
+                    <p><i>For creators who want quality, story-driven content.</i></p>
                 </div>
                 
                 <div class="services-card-body">
-                <p><i>For creators who want quality, story-driven content.</i></p>
+                
 
                 <div class="services-card-sub-header">
                     <h4>Full Video Production (Editing + Narrative Arc)</h4>
@@ -316,18 +325,19 @@
                     <li>Callouts, quote pulls, mini-montages to elevate storytelling</li>
                 </ul>
             </div>
-                <div class="services-card-footer">
+                <a href="#contact" class="services-card-footer">
                     <h3 >I want this</h3>
-                </div>
+                </a>
             </div>
 
             <div class="services-card">
                 <div class="services-card-header">
                     <h3>Long-Term Creative Direction</h3>
+                    <p><i>For studios or creators ready to scale like a brand.</i></p>
                 </div>
 
                 <div class="services-card-body">
-                <p><i>For studios or creators ready to scale like a brand.</i></p>
+                
 
                 <div class="services-card-sub-header">
                     <h4>Channel Architecture & Format Systems</h4>
@@ -347,9 +357,9 @@
                     <li>Become the “shadow co-creator” shaping a channel’s evolution</li>
                 </ul>
             </div>
-                <div class="services-card-footer">
+                <a href="#contact" class="services-card-footer">
                     <h3 >I want this</h3>
-                </div>
+                </a>
                 
             </div>
 
@@ -358,9 +368,24 @@
 
         </div>
         </section>
-
-        <section id="contact" class="contact-section">
+        <div id="contact"></div>
+        <section  class="contact-section">
+            
             <h3 class="section-title">Get In Touch</h3>
+
+            <form action="https://formsubmit.co/agram@hotmail.co.uk.com" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+              
+                <!-- optional anti-spam hidden field -->
+                <input type="text" name="_honey" style="display:none">
+              
+                <!-- optional redirect after submit 
+                <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">-->
+              
+                <button type="submit">Send</button>
+              </form>
         </section>
 
 
@@ -369,7 +394,7 @@
 
     <footer>
         <div class="left-side">
-            Send me an email: SuperHeavyBallet@gmail.com
+            
         </div>
 
         <div class="right-side">

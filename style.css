@@ -70,6 +70,7 @@ table {
 
 a{
     text-decoration: none;
+    
 }
 
 a:hover{
@@ -153,8 +154,10 @@ main{
 }
 
 .navbar-logo{
-    font-weight: bold;
+    font-weight: bolder;
+    font-style: italic;
     color: var(--card-background-color);
+    margin-left: 1rem;
 }
 
 .navbar-tabs{
@@ -168,11 +171,22 @@ main{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    border-left: 2px solid var(--bright-text);
+    margin-right: 1rem;
 }
 
+.navbar-tabs ul li{
+    text-align: center;
+    color: var(--bright-text);
+    font-weight: bold;
+
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-right: 2px solid var(--bright-text);
+}
 .navbar-tabs ul li:hover{
     cursor: pointer;
-    color: var(--bright-text);
+    color: var(--accent);
 }
 .hero-section{
   
@@ -254,7 +268,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     
     background-color: var(--bright-text);
     border-radius: 5px;
-   transition: transform 0.2s ease-in-out;
+   transition: transform 0.2s ease-out;
 }
 
 .hero-section-card-text li:hover{
@@ -412,8 +426,8 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     flex-direction: column;
 
     min-height: 18rem;
-    transition: transform 0.15s ease-in-out;
-    transition: box-shadow 0.15s ease-in-out;
+    transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+
 
 }
 
@@ -467,7 +481,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
     font-size: large;
     font-weight: bold;
-    transition: transform 0.15s ease-in-out;
+    transition: transform 0.15s ease-out;
 }
 
 .prominent-button:hover{
@@ -475,6 +489,10 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     cursor: pointer;
     scale: 102%;
     transform: translateY(-2.5px);
+}
+
+.prominent-button:visited, .prominent-button:hover, .prominent-button:active{
+    color: var(--bright-text);
 }
 
 .video-carousel{
@@ -502,7 +520,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     color: var(--bright-text);
     font-weight: bolder;
     font-size: x-large;
-    transition: transform 0.15s ease-in-out;
+    transition: transform 0.15s ease-out;
 }
 
 .carousel-holder button:first-of-type:hover{
@@ -572,8 +590,8 @@ iframe{
 
     align-items: center;
     min-height: 18rem;
-    transition: transform 0.15s ease-in-out;
-    transition: box-shadow 0.15s ease-in-out;
+    transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+
     text-align: center;
     justify-content: space-between;
 
@@ -581,8 +599,14 @@ iframe{
 
 .services-card:hover{
     cursor: pointer;
-    transform: translateY(-2.5px);
+    transform: scale(101%);
     box-shadow: var(--accent) 0px 3px 8px;
+
+    .services-card-header{
+        background-color: var(--accent);
+
+        
+    }
 
 }
 
@@ -590,29 +614,29 @@ iframe{
     background-color: var(--soft-grid-line);
     width: 100%;
     border-radius: 5px 5px 0 0;
-    margin-bottom:1rem ;
     
 }
 
-.services-card h3{
+.services-card-header h3{
     
     
-    padding: 2rem;
+    padding: 2rem 2rem 0.25rem 2rem;
     
     color: var(--bright-text);
     font-size: large;
     font-weight: bold;
 
+}
 
-  
-    
-   
+.services-card-header p{
+    color: var(--bright-text);
+    padding: 0.5rem 1rem 1rem 1rem;
 }
 
 .services-card-body{
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
     padding-bottom: 1rem ;
@@ -620,15 +644,13 @@ iframe{
 }
 .services-card-sub-header{
     background-color: var(--supporting-text);
-    margin: 1rem 0rem;
+   
     width: 100%;
+
     
 }
 
-.services-card p{
-    color: var(--primary-text);
-    padding: 0.5rem;
-}
+
 
 .services-card h4{
     
@@ -641,16 +663,27 @@ iframe{
 }
 
 .services-card li{
+
    text-align: start;
-   margin: 0 1rem;
+
    color: var(--primary-text);
-    padding: 0.5rem;
+    padding: 1rem 2rem;
 }
 
 .services-card-footer{
     background-color: var(--highlight);
     width: 100%;
     border-radius: 0 0 5px 5px;
+}
+
+.services-card-footer h3{
+    
+    padding: 1rem;
+    
+    color: var(--bright-text);
+    font-size: large;
+    font-weight: bold;
+
 }
 
 
@@ -677,4 +710,6 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
 }
