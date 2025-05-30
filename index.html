@@ -35,7 +35,14 @@
     </header>
 
     <main >
-        <section class="hero-section" >
+
+ 
+            <a class="return-to-top" id="return-to-top-button" href="#hero">
+                <h4>Go Up</h4>
+            </a>
+     
+
+        <section class="hero-section" id="hero-section">
             <div id="hero"></div>
             <section class="hero-section-card-text">
             <h2>YouTube Growth Consultant & Creative Director</h2>
@@ -80,7 +87,8 @@
             <h3><i>Let’s build something worth watching</i>.</h3>
           
             <div class="button-tray">
-                <a class="prominent-button" href="#contact">Book a Strategy Call</a> <a class="prominent-button" href="#case-studies">View Case Studies</a>
+                <a class="prominent-button" href="#contact" id="service_StratCall">Book a Strategy Call</a> 
+                <a class="prominent-button" href="#case-studies">View Case Studies</a>
             </div>
         </section>
 
@@ -124,7 +132,7 @@
     </div>
         <h3><i>I have skills and experience that will boost your project.</i></h3>
         <div class="button-tray">
-            <button class="prominent-button">Book a Free Consultation</button>
+            <a href="#contact" class="prominent-button" id="service_FreeConsult">Book a Free Consultation</a>
         </div>
 
 
@@ -253,11 +261,11 @@
         </section>
 
         <div  id="services"></div>
-        <section  class="services-section">
+        <section  class="services-section" >
             <h3 class="section-title">Services I Offer</h3>
 
             <div class="services-cards-row">
-            <div class="services-card">
+            <div class="services-card" id="service_StratConsult">
                 <div class="services-card-header">
                     <h3>Strategy & Consulting</h3>
                     <p><i>For creators who want to grow smart, not just fast.</i></p>
@@ -288,12 +296,12 @@
                 </ul>
             </div>
 
-                <a href="#contact" class="services-card-footer">
+                <div href="#contact" class="services-card-footer" >
                     <h3 >I want this</h3>
-                </a>
+                </div>
             </div>
 
-            <div class="services-card">
+            <div class="services-card" id="service_VideoCreateEdit">
                 <div class="services-card-header">
                     <h3>Video Creating & Editing Services</h3>
                     <p><i>For creators who want quality, story-driven content.</i></p>
@@ -325,12 +333,12 @@
                     <li>Callouts, quote pulls, mini-montages to elevate storytelling</li>
                 </ul>
             </div>
-                <a href="#contact" class="services-card-footer">
+                <div href="#contact" class="services-card-footer" >
                     <h3 >I want this</h3>
-                </a>
+                </div>
             </div>
 
-            <div class="services-card">
+            <div class="services-card" id="service_LongTermDirect">
                 <div class="services-card-header">
                     <h3>Long-Term Creative Direction</h3>
                     <p><i>For studios or creators ready to scale like a brand.</i></p>
@@ -357,9 +365,9 @@
                     <li>Become the “shadow co-creator” shaping a channel’s evolution</li>
                 </ul>
             </div>
-                <a href="#contact" class="services-card-footer">
+                <div href="#contact" class="services-card-footer" >
                     <h3 >I want this</h3>
-                </a>
+                </div>
                 
             </div>
 
@@ -373,19 +381,48 @@
             
             <h3 class="section-title">Get In Touch</h3>
 
-            <form action="https://formsubmit.co/agram@hotmail.co.uk" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-              
-                <!-- optional anti-spam hidden field -->
-                <input type="text" name="_honey" style="display:none">
-              
-                <!-- optional redirect after submit 
-                <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">-->
-              
-                <button type="submit">Send</button>
-              </form>
+            <!-- modify this form HTML and place wherever you want your form -->
+                <form
+                action="https://formspree.io/f/xovwalaq"
+                method="POST"
+                >
+                <div class="contact-details">
+                    <label>Your Name:
+                        <input type="text" name="name"></input>
+                    </label>
+                    <label>
+                    Your email:
+                    <input type="email" name="email">
+                    </label>
+                </div>
+
+                <div class="service-details">
+                <label >
+                    <label>Service Type:
+                        <select type="select" name="service" id="serviceSelection">
+                        
+                        <option value="free-consultation">Free Consultation</option>
+                        <option value="strategy-call">Strategy Call</option>
+                        <option value="strategy-consulting">Strategy & Consulting</option>
+                        <option value="video-creation-editing">Video Creation & Editing</option>
+                        <option value="creative-direction">Creative Direction</option>
+                        <option value="other">Other</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="message-details">
+                    Your message:
+                    <textarea name="message"></textarea>
+                    </label>
+                </div>
+
+                <!-- Honeypot field: bots might fill this, but users won't see it -->
+                <input type="text" name="_gotcha" class="hidden">
+    
+                <!-- your other form fields go here -->
+                <button type="submit" class="prominent-button">Send</button>
+                </form>
         </section>
 
 

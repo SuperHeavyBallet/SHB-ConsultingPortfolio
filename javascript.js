@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", () =>
 
     let currentIndexVideoToShow = [0,1];
 
-    console.log(videosInCarousel);
+   ActivateBackToTopButton();
+   AutoSelectService();
 
     nextButton.addEventListener("click", (e) => {
         e.preventDefault();
@@ -65,6 +66,74 @@ document.addEventListener("DOMContentLoaded", () =>
         youtubePlayers.forEach(player => {
             if(player.pauseVideo) {
                 player.pauseVideo();
+            }
+        })
+    }
+
+    function ActivateBackToTopButton()
+    {
+        const target = document.getElementById('hero-section');
+        const backToTopButton = document.getElementById('return-to-top-button');
+
+        const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                backToTopButton.classList.add('hidden');
+            } else {
+                backToTopButton.classList.remove('hidden');
+            }
+            });
+        },
+        {
+            threshold: 0.5, // Trigger when 80% of the element is visible
+        }
+        );
+
+        observer.observe(target);
+    }
+
+    function AutoSelectService()
+    {
+        
+
+        const service_StrategyCall = document.getElementById("service_StratCall");
+        const service_FreeConsult = document.getElementById("service_FreeConsult")
+        const service_StrategyConsulting = document.getElementById("service_StratConsult");
+        const service_VideoCreateEdit = document.getElementById("service_VideoCreateEdit");
+        const service_LongTermDirect = document.getElementById("service_LongTermDirect");
+
+        AddServiceEvent(service_StrategyCall);
+        AddServiceEvent(service_FreeConsult);
+        AddServiceEvent(service_StrategyConsulting);
+        AddServiceEvent(service_VideoCreateEdit);
+        AddServiceEvent(service_LongTermDirect);
+    }
+
+    function AddServiceEvent(element)
+    {
+        const serviceSelection = document.getElementById("serviceSelection");
+
+        element.addEventListener("click", (e) => {
+      
+
+            switch(element.id){
+                case "service_StratCall":
+                    serviceSelection.value = "strategy-call";
+                    break;
+                    case "service_FreeConsult":
+                    serviceSelection.value = "free-consultation"; 
+                    break;
+                    case "service_StratConsult":
+                    serviceSelection.value = "strategy-consulting";
+                    break;
+                    case "service_VideoCreateEdit":
+                    serviceSelection.value = "video-creation-editing";
+                    break;
+                    case "service_LongTermDirect":
+                    serviceSelection.value = "creative-direction";
+                    break;
+                    default : break;
             }
         })
     }
