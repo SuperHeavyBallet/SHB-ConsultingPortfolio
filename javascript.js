@@ -62,13 +62,7 @@ document.addEventListener("DOMContentLoaded", () =>
         });
     }
 
-    function pauseAllYouTubeVideos(){
-        youtubePlayers.forEach(player => {
-            if(player.pauseVideo) {
-                player.pauseVideo();
-            }
-        })
-    }
+    
 
     function ActivateBackToTopButton()
     {

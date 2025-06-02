@@ -132,7 +132,7 @@ body{
 
 .return-to-top{
     position: fixed;
-    bottom: 2rem;
+    bottom: 3rem;
     left: 1rem;
     color: white;
     outline: none;
@@ -284,7 +284,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     
 }
 
-.hero-section-card-text li{
+.hero-section-card-text .hero-sub-card{
     flex: 1;
     max-width: 10rem;
 
@@ -303,7 +303,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
    transition: transform 0.2s ease-out;
 }
 
-.hero-section-card-text li:hover{
+.hero-section-card-text .hero-sub-card:hover{
     transform: translateY(-5px);
     box-shadow: var(--accent) 0px 3px 8px;
 }
@@ -375,7 +375,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     max-width: 60%;
 }
 
-.about-section h3{
+.about-section h2{
     font-weight: bold;
     text-align: center;
     margin: 1rem;
@@ -748,14 +748,23 @@ form select{
 }
 
 .service-details{
-    margin: 1rem 0;
+    margin: 1rem 0 1rem 0;
 }
 
 .message-details{
-    margin: 1rem 0;
+    margin: 2rem 0 1rem 0;
     width: 100%;
+    
     display: flex;
     flex-direction: column;
+
+}
+
+.message-details textarea{
+    margin-top: 0.5rem;
+    min-height: 10rem;
+    min-width: 40rem;
+    max-width: 40rem;
 }
 
 footer{
