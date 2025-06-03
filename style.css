@@ -165,8 +165,7 @@ body{
 main{
     display: flex;
     flex-direction: column;
-    padding-left: 10rem;
-    padding-right: 10rem;
+    
 }
 
 .navbar{
@@ -227,16 +226,24 @@ main{
     justify-content: center;
 }
 
+
+
+
+
+.hero-section h4{
+    font-weight: bold;
+    font-style: italic;
+    padding-bottom: 1.5rem;
+}
+
 .hero-section-card-text{
-    flex: 2;
-    
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
+
 
     background-color: var(--card-background-color);
     padding: 1rem;
-    margin: 2rem;
-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -284,11 +291,11 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     
 }
 
-.hero-section-card-text .hero-sub-card{
+.hero-sub-card{
     flex: 1;
     max-width: 10rem;
 
-    min-height: 12rem;
+    min-height: 20rem;
     text-align: center;
     margin: 1rem 2rem;
    
@@ -298,23 +305,49 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     
-    background-color: var(--bright-text);
+    background-color: var(--depth-background);
+    color: var(--bright-text);
     border-radius: 5px;
    transition: transform 0.2s ease-out;
 }
+
+.hero-sub-card .image-head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+
+.hero-sub-card .image-head img{
+    border-radius: 5px;
+    overflow: hidden;
+    object-fit: contain;
+    background-color: var(--card-background-color);
+}
+
+.hero-sub-card h3{
+    margin-top: 1rem;
+    color: var(--bright-text);
+    font-size: medium;
+    padding: 0 0.5rem;
+}
+
+.hero-sub-card p{
+    color: var(--bright-text);
+    padding: 0 0.5rem;
+}
+
+
+
 
 .hero-section-card-text .hero-sub-card:hover{
     transform: translateY(-5px);
     box-shadow: var(--accent) 0px 3px 8px;
 }
 
-.hero-section-card-text li h3{
-    background-color: var(--soft-grid-line);
-    color: var(--bright-text);
-    padding: 1rem;
-    flex: 1;
-    border-radius: 5px 5px 0 0;
-}
+
 
 .hero-section-card-text li p{
 
@@ -451,13 +484,14 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: var(--bright-text);
     color: var(--card-background-color);
     border-radius: 5px;
+  
     margin: 1rem;
-    max-width: 15rem;
+    max-width: 18rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     display: flex;
     flex-direction: column;
 
-    min-height: 18rem;
+    min-height: 16rem;
     transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
 
 
@@ -487,9 +521,12 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
    
 }
 
+.case-study-card .text-section{
+    padding:1rem 1rem;
+}
 .case-study-card p{
-    padding: 0.25rem 2rem;
-    text-align: center;
+    padding-bottom: 0.5rem;
+    text-align: start;
     font-size: medium;
 }
 
@@ -736,23 +773,39 @@ iframe{
 
 form input{
     margin-right: 1rem;
-    height: 1rem;
+    height: 1.75rem;
+    padding-left: 1rem;
 }
 
 form select{
     margin-right: 1rem;
-    height: 1.5rem;
+    height: 1.75rem;
 }
 .contact-details{
     margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--depth-background);
 }
 
 .service-details{
-    margin: 1rem 0 1rem 0;
+    margin: 1.5rem 0 1rem 0;
+ 
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    
+}
+
+.service-details select{
+    margin-left: 1rem;
 }
 
 .message-details{
-    margin: 2rem 0 1rem 0;
+    margin: 1rem 0 1rem 0;
+    
     width: 100%;
     
     display: flex;
@@ -760,11 +813,14 @@ form select{
 
 }
 
+
+
 .message-details textarea{
     margin-top: 0.5rem;
     min-height: 10rem;
     min-width: 40rem;
     max-width: 40rem;
+    padding: 1rem;
 }
 
 footer{
