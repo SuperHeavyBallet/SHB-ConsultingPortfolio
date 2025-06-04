@@ -397,21 +397,37 @@ main{
 
 .about-section{
 
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: var(--card-background-color);
-    padding: 1rem;
-    margin: 2rem auto;
+
+    background-color: var(--depth-background);
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: var(--bright-text);
+  
+
+}
+
+.about-left{
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 60%;
+    align-items: center;
+}
+.about-right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-section h2{
     font-weight: bold;
     text-align: center;
-    margin: 1rem;
+  
 }
 
 .about-section h4{
@@ -422,19 +438,21 @@ main{
 
 .client-card{
     background-color: var(--bright-text);
-    max-width: 30rem;
+    width: 100%;
+
     align-self: center;
-    border-radius: 5px;
-    margin: 1rem 1rem 2rem 1rem;
+
+
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: var(--primary-text);
 }
 
 .client-card h4{
     font-weight: bold;
-    background-color: var(--soft-grid-line);
+    background-color: var(--bright-text);
     color: var(--bright-text);
     padding: 1rem;
-    border-radius: 5px 5px 0 0;
+
 }
 
 .about-section p{
