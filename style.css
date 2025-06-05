@@ -176,7 +176,7 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    
     position: sticky;
     top: 0;
     color: var(--supporting-text);
@@ -224,6 +224,7 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    
 }
 
 
@@ -234,6 +235,7 @@ main{
     font-weight: bold;
     font-style: italic;
     padding-bottom: 1.5rem;
+    
 }
 
 .hero-section-card-text{
@@ -242,27 +244,34 @@ main{
 
 
     background-color: var(--card-background-color);
-    padding: 1rem;
+  
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    padding-bottom: 2rem;
     
 
   
 }
 
+.hero-header{
+    background-color: var(--depth-background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 
-.hero-section-card-text .text-block{
     text-align: center;
-   padding: 1.5rem;
-   margin-bottom: 1.5rem;
-    border-bottom: 1px solid var(--soft-grid-line);
+    color: var(--bright-text);
+    padding: 1rem 0rem;
 }
-
-.hero-section-card-text p{
-    padding: 0.5rem;
+.text-block{
+    text-align: center;
+   padding: 2.5rem 1.5rem;
+  
 }
 
 
@@ -274,6 +283,8 @@ main{
 .hero-section-card-text h3{
   line-height: 1.5rem;
   font-weight: bold;
+  margin-bottom: 1rem;
+  font-style: italic;
 
 }
 
@@ -282,13 +293,12 @@ main{
 
 
 .hero-section-card-text ul{
-    margin: 1rem 2rem;
+    border-top: 1px solid var(--primary-text);
+    border-bottom: 1px solid var(--primary-text);
+    padding: 1rem;
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: row;
-
-    
-    
-    
 }
 
 .hero-sub-card{
@@ -358,19 +368,6 @@ main{
 
 
 
-.hero-section-card-image{
-    flex: 1;
-    background-color: var(--card-background-color);
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 1rem;
-    margin: 2rem;
-    display: block;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
 
 @media only screen and (max-width: 1000px){
     .hero-section-card-image{
@@ -387,11 +384,7 @@ main{
     margin: 1rem;
 }
 
-.hero-section-card-image img{
-    max-width: 100%;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
+
 
 
 
@@ -415,6 +408,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem 4rem;
 }
 .about-right{
     flex: 1;
@@ -422,11 +416,14 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem 4rem;
+    background-color: var(--bright-text);
 }
 
 .about-section h2{
     font-weight: bold;
     text-align: center;
+    margin-bottom: 2rem;
   
 }
 
@@ -437,20 +434,19 @@ main{
 }
 
 .client-card{
-    background-color: var(--bright-text);
-    width: 100%;
+ 
+    
 
     align-self: center;
 
 
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     color: var(--primary-text);
 }
 
 .client-card h4{
     font-weight: bold;
     background-color: var(--bright-text);
-    color: var(--bright-text);
+    color: var(--primary-text);
     padding: 1rem;
 
 }
@@ -470,14 +466,14 @@ main{
 
 .case-studies-section{
 
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
     background-color: var(--card-background-color);
     padding: 1rem;
-    margin: 2rem auto;
+   
     display: flex;
     flex-direction: column;
-    width: 95%;
+
 
 }
 
@@ -485,6 +481,24 @@ main{
     font-weight: bold;
     text-align: center;
     margin: 1rem;
+}
+
+.case-studies-headers{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 4rem;
+    border-bottom: 3px solid var(--primary-text);
+}
+
+.case-studies-headers li{
+    background-color: var(--depth-background);
+    padding: 1rem 2rem;
+    margin: 0 1rem;
+    border-radius: 5px 5px 0 0;
+    color: var(--bright-text);
+    font-weight: bold;
 }
 
 .case-studies-card-wrapper{
@@ -587,7 +601,10 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 2rem auto;
+    background-color: var(--depth-background);
+    padding: 3rem;
+  
+
     
 }
 
@@ -645,15 +662,15 @@ iframe{
 
 .services-section{
 
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
     background-color: var(--card-background-color);
     padding: 1rem;
-    margin: 2rem auto;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 95%;
+
 }
 
 
