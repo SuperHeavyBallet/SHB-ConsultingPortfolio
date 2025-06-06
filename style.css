@@ -473,6 +473,7 @@ main{
    
     display: flex;
     flex-direction: column;
+    min-height: 30rem;
 
 
 }
@@ -488,8 +489,8 @@ main{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 1rem 4rem;
-    border-bottom: 3px solid var(--primary-text);
+    margin: 1rem 15rem 0rem 15rem;
+    
 }
 
 .case-studies-headers li{
@@ -500,6 +501,44 @@ main{
     color: var(--bright-text);
     font-weight: bold;
 }
+
+.case-studies-headers li:hover{
+    cursor: pointer;
+    background-color: var(--accent);
+}
+
+.case-studies-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    margin: 0rem 10rem 1rem 10rem;
+    border-top: 3px solid var(--primary-text);
+    padding-top: 2rem;
+    
+}
+
+.case-studies-avatar-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+.case-studies-text-section{
+    max-width: 60%;
+    margin: 1rem;
+}
+
+.case-studies-avatar-section h3{
+    background-color: var(--depth-background);
+    color: var(--bright-text);
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+
 
 .case-studies-card-wrapper{
 
