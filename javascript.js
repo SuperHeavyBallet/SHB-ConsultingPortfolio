@@ -1,5 +1,12 @@
 document.addEventListener("DOMContentLoaded", () =>
 {
+    document.querySelectorAll("iframe").forEach(iframe => {
+        if (!iframe.dataset.src && iframe.src) {
+            iframe.dataset.src = iframe.src;
+            iframe.removeAttribute("src");
+        }
+    });
+    
     const videosInCarousel = document.getElementsByClassName("video-wrapper");
     let youtubePlayers = [];
 
@@ -22,6 +29,49 @@ document.addEventListener("DOMContentLoaded", () =>
         console.log("PRevious");
         ShiftVideosShown(-2); 
     });
+
+    SetupCaseStudies();
+    let visibleIframes;
+
+loadVisibleIframes();
+
+    function loadVisibleIframes() {
+        visibleIframes = document.querySelectorAll('.video-wrapper:not(.hidden) iframe');
+    
+        visibleIframes.forEach(iframe => {
+            if (!iframe.src && iframe.dataset.src) {
+                iframe.src = iframe.dataset.src;
+            }
+        });
+    }
+
+    function SetupCaseStudies()
+    {
+
+        const caseStudiesButtons = document.querySelectorAll('.case-study-button');
+        const caseStudiesText = document.querySelectorAll('.case-studies-block');
+    
+        
+    
+    
+        caseStudiesButtons.forEach((button) => {
+    
+            button.addEventListener("click", (e) =>
+            {
+                e.preventDefault();
+    
+                for(let i = 0; i < caseStudiesButtons.length; i++)
+                {
+                    caseStudiesText[i].classList.add("hidden");
+    
+                    if(button === caseStudiesButtons[i])
+                    {
+                        caseStudiesText[i].classList.remove("hidden");
+                    }
+                }
+            })
+        });
+    }
 
     function ShiftVideosShown(shift)
     {
@@ -50,6 +100,7 @@ document.addEventListener("DOMContentLoaded", () =>
         }
     
         currentIndexVideoToShow = [newIndex1, newIndex2];
+        loadVisibleIframes();
 
     }
 
@@ -57,8 +108,10 @@ document.addEventListener("DOMContentLoaded", () =>
         const iframes = document.querySelectorAll("iframe");
     
         iframes.forEach(iframe => {
-            const src = iframe.src;
-            iframe.src = src; // Reset the src to stop playback
+            if (iframe.src) {
+                // Replace only the 'src', preserve 'data-src'
+                iframe.removeAttribute("src"); // prevents weird reloads
+            }
         });
     }
 
