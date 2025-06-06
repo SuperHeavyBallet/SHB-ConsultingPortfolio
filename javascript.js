@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () =>
     let currentIndexVideoToShow = [0,1];
 
    ActivateBackToTopButton();
-   AutoSelectService();
+   //AutoSelectService();
 
     nextButton.addEventListener("click", (e) => {
         e.preventDefault();
