@@ -576,6 +576,10 @@ main{
     .case-studies-section{
         display: none;
     }
+
+    #nav-casestudies{
+        display: none;
+    }
     
 }
 
@@ -823,6 +827,10 @@ main{
     .video-carousel{
         display: none;
          
+     }
+
+     #nav-videos{
+        display: none;
      }
    
 }
