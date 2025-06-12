@@ -143,10 +143,17 @@ body{
     color: white;
     padding: 1rem;
     margin: 1rem;
-
+    z-index: 999;
     font-size: large;
     font-weight: bold;
     transition: transform 0.15s ease-out;
+}
+
+@media screen and (max-width: 400px) {
+    .return-to-top{
+        display: none;
+    }
+    
 }
 
 .return-to-top h4{
@@ -346,6 +353,10 @@ main{
         display: flex;
         flex-direction: column;
     }
+
+    .hero-section .prominent-button:last-of-type{
+        display: none;
+    }
     
 }
 .hero-sub-card{
@@ -455,14 +466,7 @@ main{
 
 }
 
-@media screen and (max-width: 1000px) {
-    .about-section{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-    
-}
+
 
 .about-left{
     flex: 1;
@@ -487,6 +491,19 @@ main{
     text-align: center;
     margin-bottom: 2rem;
   
+}
+
+@media screen and (max-width: 1000px) {
+    .about-section{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-left, .about-right{
+        padding: 2rem 1rem;
+    }
+    
 }
 
 .about-section h4{
@@ -712,6 +729,7 @@ main{
     align-items: center;
     background-color: var(--depth-background);
     padding: 3rem;
+
   
 
     
@@ -758,6 +776,8 @@ main{
 {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width: 1600px) {
@@ -765,6 +785,8 @@ main{
     {
         display: flex;
         flex-direction: column;
+        margin: 0;
+        padding: 0;
     }
    
 }
@@ -784,21 +806,36 @@ main{
     border: none; /* optional */
 }
 
-
-@media screen and (max-width: 900px) {
-
+@media screen and (max-width: 1000px){
     .carousel-holder button{
         display: none;
     }
 
-    .video-wrapper{
-        width: 100%;
-        height:auto;
-        margin: 1rem;
-        border-radius: 5px;
-        border: 3px solid var(--highlight);
-    }
+    .video-wrapper:nth-of-type(2)
+    {display: none;}
+
+}
+
+@media screen and (max-width: 900px) {
+
+    
+
+    .video-carousel{
+        display: none;
+         
+     }
    
+}
+
+@media screen and (max-width: 400px){
+
+    .video-carousel{
+       display: none;
+        
+    }
+
+
+
 }
 
 
@@ -830,14 +867,7 @@ main{
    
 }
 
-@media screen and (max-width: 1600px){
 
-    .services-cards{
-        flex-direction: column;
-        align-items: center;
-    }
-
-}
     
 
 
@@ -851,6 +881,20 @@ main{
     
     max-width: 30rem;
     border-radius: 5px;
+}
+
+@media screen and (max-width: 1600px){
+
+    .services-cards{
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 0rem;
+    }
+    .services-card{
+        margin: 1rem 0.5rem;
+        max-width: 90%;
+    }
+
 }
 
 .services-card-header{
@@ -1025,15 +1069,17 @@ main{
 
 .contact-section{
 
-    border-radius: 5px;
+
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: var(--card-background-color);
+    background-color: var(--depth-background);
     padding: 1rem;
-    margin: 2rem auto;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 60%;
+    align-items: center;
+    color: var(--bright-text);
+
 }
 
 form input{
@@ -1042,7 +1088,33 @@ form input{
     padding-left: 1rem;
 }
 
-form select{
+.service-details{
+    margin: 0.5rem 0 0 0;
+ 
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+}
+
+.service-details label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
+
+}
+
+.service-details label p{
+    margin-bottom: 1rem;
+}
+
+.service-details select
+{
+    
     margin-right: 1rem;
     height: 1.75rem;
 }
@@ -1055,27 +1127,6 @@ form select{
     border-bottom: 1px solid var(--depth-background);
 }
 
-@media screen and (max-width:700px) {
-    .contact-details{
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    
-}
-
-.service-details{
-    margin: 1.5rem 0 1rem 0;
- 
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    
-}
-
-.service-details select{
-    margin-left: 1rem;
-}
 
 .message-details{
     margin: 1rem 0 1rem 0;
@@ -1092,21 +1143,60 @@ form select{
 .message-details textarea{
     margin-top: 0.5rem;
     min-height: 10rem;
-    min-width: 40rem;
+  
     max-width: 40rem;
     padding: 1rem;
 }
 
+@media screen and (max-width: 1000px) {
+
+    form input{
+        margin-right: 0rem;
+        height: 1.75rem;
+        padding-left: 1rem;
+    }
+
+    .service-details{
+        
+        
+    }
+
+    .service-details label{
+        width: 100%;
+    }
+    .service-details select{
+        margin: 0rem;
+        width: 100%;
+        padding-left: 0rem;
+    }
+}
+
 @media screen and (max-width:700px) {
+    .contact-details{
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .message-details textarea{
         margin-top: 0.5rem;
-    min-height: 10rem;
-    min-width: 90%;
-    max-width: 90%;
+        
     padding: 1rem;
     }
 
+    
 }
+
+.contact-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
 
 
 footer{
